@@ -6,7 +6,7 @@ public class Lion {
 
     boolean hasMane;
 
-    private IFeline feline;
+    public IFeline feline;
 
 <span class="fc" id="L11">    public Lion (IFeline feline) {</span>
 <span class="fc" id="L12">        this.feline = feline;</span>
@@ -17,7 +17,7 @@ public class Lion {
     }
 
     public List&lt;String&gt; getFood() throws Exception {
-<span class="nc" id="L20">        return feline.getFood(&quot;Хищник&quot;);</span>
+<span class="fc" id="L20">        return feline.getFood(&quot;Хищник&quot;);</span>
     }
 
     public boolean doesHaveMane() {
