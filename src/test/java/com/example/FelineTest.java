@@ -5,22 +5,43 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
+import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
+  @Spy
+  Feline feline;
 
 
-  @Before
-  public void init() {
-    MockitoAnnotations.initMocks(this);
+  @Test
+  public void getFoodPredatorSuccess() throws Exception {
+    feline.eatMeat();
+    Mockito.verify(feline, Mockito.times(1)).getFood("Хищник");
   }
 
   @Test
   public void getFamilyFeline() {
-    Feline feline = new Feline();
     Assert.assertEquals("Кошачьи", feline.getFamily());
   }
 
+  @Test
+  public void getKittenSuccess() {
+    Assert.assertTrue(feline.getKittens() == 1 );  }
+
+
+
+  @Test
+  public void getKittensSuccess() {
+    Assert.assertTrue(feline.getKittens(3) == 3);  }
+
+
+
+
+
 }
+
+

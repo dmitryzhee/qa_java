@@ -6,7 +6,7 @@ public class Lion {
 
     boolean hasMane;
 
-    private IFeline feline;
+    public IFeline feline;
 
     public Lion (IFeline feline) {
         this.feline = feline;
