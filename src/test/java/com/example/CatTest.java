@@ -22,7 +22,6 @@ public class CatTest {
 
     @Test
     public void getFoodSuccess() throws Exception {
-
         cat.getFood();
         Mockito.verify(feline, Mockito.times(1)).eatMeat();
     }
