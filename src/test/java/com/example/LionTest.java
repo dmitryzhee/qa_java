@@ -22,7 +22,7 @@ public class LionTest {
 
     @Test
   public void getKittenSuccess() {
-    Assert.assertTrue(feline.getKittens() == 1 );
+    Assert.assertTrue(lion.getKittens() == 1 );
   }
 
   @Test

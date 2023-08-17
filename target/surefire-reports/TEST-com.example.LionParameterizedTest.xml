@@ -63,7 +63,7 @@
     <property name="java.vendor.version" value="Corretto-17.0.8.7.1"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.example.LionParameterizedTest" name="shouldCheckMain[0]" time="0.003"/>
+  <testcase classname="com.example.LionParameterizedTest" name="shouldCheckMain[0]" time="0.002"/>
   <testcase classname="com.example.LionParameterizedTest" name="shouldCheckMain[1]" time="0"/>
-  <testcase classname="com.example.LionParameterizedTest" name="shouldCheckMain[2]" time="0"/>
+  <testcase classname="com.example.LionParameterizedTest" name="shouldCheckMain[2]" time="0.001"/>
 </testsuite>
