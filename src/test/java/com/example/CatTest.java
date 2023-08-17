@@ -11,7 +11,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class CatTest {
     @Spy
-    Feline feline = new Feline();
+    Feline feline;
 
     Cat cat;
 

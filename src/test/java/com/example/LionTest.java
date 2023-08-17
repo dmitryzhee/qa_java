@@ -20,10 +20,9 @@ public class LionTest {
    lion = new Lion(feline);
   }
 
-
     @Test
   public void getKittenSuccess() {
-    Assert.assertTrue(lion.getKittens() == 1 );
+    Assert.assertTrue(feline.getKittens() == 1 );
   }
 
   @Test
