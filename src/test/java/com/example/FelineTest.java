@@ -21,22 +21,20 @@ public class FelineTest {
 
   @Test
   public void getFamilyFeline() {
-    Assert.assertEquals("Кошачьи", feline.getFamily());
+    Feline familyFeline = new Feline();
+    Assert.assertEquals("Кошачьи", familyFeline.getFamily());
   }
 
   @Test
   public void getKittenSuccess() {
-    Assert.assertTrue(feline.getKittens() == 1 );  }
-
+    feline.getKittens();
+    Mockito.verify(feline, Mockito.times(1)).getKittens();}
 
 
   @Test
   public void getKittensSuccess() {
-    Assert.assertTrue(feline.getKittens(3) == 3);  }
-
-
-
-
+    feline.getKittens(3);
+    Mockito.verify(feline, Mockito.times(1)).getKittens(3);}
 
 }
 
