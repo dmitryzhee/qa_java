@@ -1,12 +1,10 @@
 package com.example;
 
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -29,5 +27,13 @@ public class LionTest {
     Mockito.verify(feline, Mockito.times(1)).getFood("Хищник");
   }
 
+  @Test
+  public void exceptionMessageSuccess() {
+      try {
+        Lion lion = new Lion(feline, "Неизвестно");
+      } catch (Exception exception) {
+        Assert.assertTrue(exception.toString().contains("Используйте допустимые значения пола животного - самей или самка"));
+      }
+  }
 
 }
