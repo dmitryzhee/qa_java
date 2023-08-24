@@ -8,8 +8,15 @@ public class Lion {
 
     public IFeline feline;
 
-    public Lion (IFeline feline) {
+    public Lion (IFeline feline, String sex) throws Exception {
         this.feline = feline;
+        if ("Самец".equals(sex)) {
+            hasMane = true;
+        } else if ("Самка".equals(sex)) {
+            hasMane = false;
+        } else {
+            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+        }
     }
 
     public int getKittens() {
@@ -24,16 +31,9 @@ public class Lion {
         return hasMane;
     }
 
-    public Lion(String sex) throws Exception {
-        if ("Самец".equals(sex)) {
-            hasMane = true;
-        } else if ("Самка".equals(sex)) {
-            hasMane = false;
-        } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
-        }
-    }
-
-
 
 }
+
+
+
+
