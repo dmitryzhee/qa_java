@@ -28,7 +28,7 @@ public class FelineTest {
   @Test
   public void getKittenSuccess() {
     feline.getKittens();
-    Mockito.verify(feline, Mockito.times(1)).getKittens();}
+    Mockito.verify(feline, Mockito.times(1)).getKittens(1);}
 
 
   @Test
